@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebApp</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div style="text-align:center; margin-top: 250px; border-style: double; padding: 20px">
+    <h1>
+     Generador de peticiones
+    </h1>
+    <button id="generate">Generar Peticiones</button>
+    <button id="cancel" disabled>Cancelar</button>
+  </div>
+  <!-- <script type="text/javascript" src="/js/server.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#generate').click(function() {
+            // run an AJAX get request to the route you setup above...
+            // respect the cross-domain policy by using the same domain
+            // you used to access your index.html file!
+            document.getElementById("generate").disabled = true;
+            document.getElementById("cancel").disabled = false; 
+            $.get('http://localhost:5000/start', function() {
+                
+            });
+        });
+        $('#cancel').click(function() {
+            // run an AJAX get request to the route you setup above...
+            // respect the cross-domain policy by using the same domain
+            // you used to access your index.html file!
+            document.getElementById("generate").disabled = false;
+            document.getElementById("cancel").disabled = true;
+            $.get('http://localhost:5000/stop', function() {
+                
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
