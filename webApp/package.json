@@ -9,7 +9,10 @@
   "author": "Daniel Montero",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.6.1",
     "azure-storage": "^2.10.2",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mssql": "^4.2.3",
+    "tedious": "^3.0.1"
   }
 }
